@@ -2,6 +2,7 @@
 - Purpose: The base of other event
 
 ## Build range that can change Carousel speed
+- Purpose: document.getElementById
 - Purpose: document.addEventListener
 - Purpose: using Bootstrap JS API
 
