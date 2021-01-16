@@ -1,5 +1,5 @@
 {
-  "autumns": [
+  "autumn": [
     {
       "src": "https://images.wallpaperscraft.com/image/hydrangea_flower_autumn_dry_113504_800x600.jpg",
       "alt": "Hydragea flower autumn"
@@ -13,7 +13,7 @@
       "alt": "Blue Asters"
     }
   ],
-  "summers": [
+  "summer": [
     {
       "src": "https://images.wallpaperscraft.com/image/sunflower_flowers_summer_124368_800x600.jpg",
       "alt": "Sun flower"
@@ -27,7 +27,7 @@
       "alt": "Purple flower"
     }
   ],
-  "springs": [
+  "spring": [
     {
       "src": "https://images.wallpaperscraft.com/image/sakura_flowers_bloom_125940_800x600.jpg",
       "alt": "Sakura"
