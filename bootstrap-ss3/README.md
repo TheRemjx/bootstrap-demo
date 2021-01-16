@@ -19,11 +19,7 @@
 
 ### document.getElementBySelector
 
-## JSON data processing
-### JSON.parse
-
-### JSON.stringify
-
-
+## JS Event Delegation
+- [Explanation - Read more](https://viblo.asia/p/event-delegation-in-javascript-V3m5WALEZO7)
 
 ## [Git] Solve the conflicts. 
