@@ -41,13 +41,15 @@
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <form class="d-flex">
+                        <label for="carousel-speed" class="form-label">Speed(s)</label>
+                        <input type="range" class="form-range" min="0.5" max="5" step="0.5" id="carousel-speed">
+                    </form>
                 </form>
             </div>
         </div>
     </nav>
-    <div id="my-carousel" class="carousel slide" data-bs-ride="carousel" style="height: 300px">
+    <div id="weather-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img
@@ -80,7 +82,48 @@
     </script>
 
     <script>
+        function initBsCarousel(interval) {
+            if (!bsCarousel)  {
+                const carousel = document.getElementById('weather-carousel');
+                bsCarousel = new bootstrap.Carousel(carousel, {
+                    interval: interval ?? 500,
+                    wrap: false,
+                });
+            }
+        }
 
+        function generateSpeedInterval(sec) {
+            return `Speed(${sec} s)`
+        }
+        function secToMs(sec) {
+            return sec * 1000;
+        }
+        function changeIntervalUsingAttribute(value) {
+            const carouselItems = Array.from(document.getElementsByClassName('carousel-item'));
+            carouselItems.forEach(item => {
+                item.setAttribute('data-bs-interval', secToMs(value));
+            })
+        }
+
+        function onCarouselSpeedChange(value) {
+            const label = document.querySelector('[for="carousel-speed"]');
+            label.innerHTML = generateSpeedInterval(value);
+            changeIntervalUsingAttribute(value);
+        }
+
+        function initSpeedChangeListener() {
+            const carouselSpeedRange = document.getElementById('carousel-speed');
+            carouselSpeedRange.addEventListener('change', (event) => {
+                console.log('speed change....', event.target.value);
+                onCarouselSpeedChange(event.target.value);
+            })
+        }
+
+        let bsCarousel;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initSpeedChangeListener();
+        })
     </script>
 
 </body>
