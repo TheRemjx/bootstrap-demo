@@ -1,5 +1,5 @@
 ## Build static carousel
-- Purpose: The base of other event
+- Purpose: The base material of session 3
 
 ## Build range that can change Carousel speed
 - Purpose: document.getElementById
