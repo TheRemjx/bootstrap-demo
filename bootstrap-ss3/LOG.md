@@ -1,14 +1,15 @@
 ## Build static carousel
 - Purpose: The base of other event
 
+## Build range that can change Carousel speed
+- Purpose: document.addEventListener
+- Purpose: using Bootstrap JS API
+
 ## Build carousel that change images base on weather
 - Purpose: document.getElementById
 - Purpose: document.getElementByClasses
 - Purpose: document.querySelector
-
-## Build range that can change Carousel speed
-- Purpose: document.addEventListener
-- Purpose: using Bootstrap JS API
+- Purpose: process JSON data
 
 ## Build Toast that show whenever weather change
 - Purpose: document.addEventListener
