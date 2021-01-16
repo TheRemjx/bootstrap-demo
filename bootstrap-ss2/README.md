@@ -29,7 +29,7 @@
 ## Responsive in Bootstrap
 - Mobile-first principle
     - Design for the least width device first.
-- `Nabbar` responsive property demonstration
+- [Responsive property demo with Navbar](./index.html)
    
 ## Glossary
 - SVC: Source version control
