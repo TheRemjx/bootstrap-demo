@@ -15,9 +15,11 @@
 ## Query elements
 ### document.getElementById
 
-### document.getElementByClass
+### document.getElementsByClass
 
 ### document.getElementBySelector
+
+### document.getElementsBySelectorAll
 
 ## JS Event Delegation
 - [Explanation - Read more](https://viblo.asia/p/event-delegation-in-javascript-V3m5WALEZO7)
