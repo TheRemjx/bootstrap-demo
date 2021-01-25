@@ -77,7 +77,7 @@
                     <button class="btn btn-primary" id="auth-btn">Authentication</button>
                 </form>
 
-                <div class="container d-none d-sm-block invisible" id="github-guide">
+                <div class="container d-none" id="github-guide">
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -93,14 +93,12 @@
                                     <input class="form-control" type="text" id="github-feeds-url" />
                                 </td>
                                 <td>
-                                    <div class="container">
-                                        <button class="btn btn-outline-primary"
-                                                disabled
-                                                onclick="onTryBtnClick('github-feeds-url')"
-                                        >
-                                            Try it out
-                                        </button>
-                                    </div>
+                                    <button class="btn btn-outline-primary"
+                                            disabled
+                                            onclick="onTryBtnClick('github-feeds-url')"
+                                    >
+                                        Try it out
+                                    </button>
                                 </td>
                             </tr>
 
@@ -123,13 +121,11 @@
                                     <input class="form-control" type="text" id="github-repositories-url" />
                                 </td>
                                 <td>
-                                    <div class="container">
-                                        <button class="btn btn-outline-primary"
-                                                disabled
-                                                onclick="onTryBtnClick('github-repositories-url')">
-                                            Try it out
-                                        </button>
-                                    </div>
+                                    <button class="btn btn-outline-primary"
+                                            disabled
+                                            onclick="onTryBtnClick('github-repositories-url')">
+                                        Try it out
+                                    </button>
                                 </td>
                             </tr>
                         </tbody>
@@ -137,7 +133,7 @@
 
                 </div>
 
-                <div class="container d-block d-sm-none invisible" id="card-github-guide">
+                <div class="container d-none" id="card-github-guide">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">
