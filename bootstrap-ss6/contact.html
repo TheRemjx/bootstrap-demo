@@ -76,8 +76,9 @@
                     </div>
                     <button class="btn btn-primary" id="auth-btn">Authentication</button>
                 </form>
-
-                <div class="container d-none" id="github-guide">
+                <!-- TODO: make this container not visible when not login yet -->
+                <!-- TODO: make this container visible on desktop only-->
+                <div class="container" id="github-guide">
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -95,7 +96,6 @@
                                 <td>
                                     <button class="btn btn-outline-primary"
                                             disabled
-                                            onclick="onTryBtnClick('github-feeds-url')"
                                     >
                                         Try it out
                                     </button>
@@ -108,8 +108,7 @@
                                     <input class="form-control" type="text" id="github-user-url" />
                                 </td>
                                 <td>
-                                    <button class="btn btn-outline-primary"
-                                            onclick="onTryBtnClick('github-user-url')">
+                                    <button class="btn btn-outline-primary">
                                         Try it out
                                     </button>
                                 </td>
@@ -123,7 +122,7 @@
                                 <td>
                                     <button class="btn btn-outline-primary"
                                             disabled
-                                            onclick="onTryBtnClick('github-repositories-url')">
+                                    >
                                         Try it out
                                     </button>
                                 </td>
@@ -132,8 +131,8 @@
                     </table>
 
                 </div>
-
-                <div class="container d-none" id="card-github-guide">
+                <!-- TODO: make this container visible on mobile only -->
+                <div class="container" id="card-github-guide">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">
@@ -142,7 +141,7 @@
                             <h6 class="car-subtitle mb-2 text-muted">
                                 <input class="form-control" type="text" id="card-github-feeds-url"/>
                             </h6>
-                            <button class="btn btn-outline-primary" onclick="onTryBtnClick('card-github-feeds-url')">Try it out</button>
+                            <button class="btn btn-outline-primary">Try it out</button>
                         </div>
                     </div>
 
@@ -154,7 +153,7 @@
                             <h6 class="car-subtitle mb-2 text-muted">
                                 <input type="text" class="form-control" id="card-github-user-url"/>
                             </h6>
-                            <button class="btn btn-outline-primary" onclick="onTryBtnClick('card-github-user-url')">Try it out</button>
+                            <button class="btn btn-outline-primary">Try it out</button>
                         </div>
                     </div>
 
@@ -166,7 +165,7 @@
                             <h6 class="car-subtitle mb-2 text-muted">
                                 <input type="text" class="form-control" id="card-github-repositories-url" />
                             </h6>
-                            <button class="btn btn-outline-primary" disabled onclick="onTryBtnClick('card-github-repositories-url')">Try it out</button>
+                            <button class="btn btn-outline-primary" disabled>Try it out</button>
                         </div>
                     </div>
                 </div>
@@ -241,10 +240,7 @@
             const githubAPI = new GithubAPI(authTokenVal);
             githubAPI.authentication().then(res => {
                 console.log('Authentication res: ', res);
-                hideErrorMessage();
-                hideAuthForm();
-                showGuideTable();
-                showGuideCard();
+                // need to control visual of the elements over here
                 setUrlTable({
                     feedsUrl: res['feeds_url'],
                     repositoriesUrl: res['current_user_repositories_url'],
@@ -268,7 +264,7 @@
             const targetUrl = document.getElementById(id).value;
             githubAPI.requestUrl(targetUrl).then(res => {
                 console.log('API res: ', res)
-                setGithubResponsePreview(JSON.stringify(res));
+                // TODO: need to apply data to the #github-response-preview
             })
         }
 
